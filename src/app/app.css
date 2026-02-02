@@ -1,10 +1,10 @@
 /* Відступ зверху, бо navbar fixed */
 .section {
-  padding-top: 5rem;
+	padding-top: 5rem;
 }
 
 /* Активний пункт меню */
 .navbar-item.is-active {
-  font-weight: 600;
-  background-color: transparent;
+	font-weight: 600;
+	background-color: transparent;
 }
