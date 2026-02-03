@@ -1,7 +1,7 @@
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+<nav class="navbar header__navbar" role="navigation" aria-label="main navigation">
 	<div class="navbar-brand">
-		<a class="navbar-item" routerLink="/home">
-			<strong class="has-text-info">AE2 </strong>
+		<a class="navbar-item header__brand" routerLink="/home">
+			<strong class="header__brandText">theme-bulma</strong>
 		</a>
 
 		<a
@@ -18,7 +18,7 @@
 		</a>
 	</div>
 
-	<div id="navbarBasicExample" class="navbar-menu" [ngClass]="{ 'is-active': isMenuOpen }">
+	<div class="navbar-menu" [ngClass]="{ 'is-active': isMenuOpen }">
 		<div class="navbar-start">
 			<a class="navbar-item" routerLink="/home" routerLinkActive="is-active">Home</a>
 			<a class="navbar-item" routerLink="/list" routerLinkActive="is-active">List</a>
@@ -30,10 +30,53 @@
 		</div>
 
 		<div class="navbar-end">
-			<div class="navbar-item">
-				<div class="buttons">
-					<a class="button is-info is-light">Log in</a>
+			<div class="navbar-item header__controls">
+				<div class="field has-addons is-flex-wrap-wrap">
+					@for (m of modes; track m) {
+						<p class="control">
+							<button
+								type="button"
+								class="button is-small"
+								[class.is-link]="theme.mode() === m"
+								(click)="setMode(m)"
+							>
+								{{ m }}
+							</button>
+						</p>
+					}
 				</div>
+
+				<div class="field has-addons is-flex-wrap-wrap">
+					@for (d of densities; track d) {
+						<p class="control">
+							<button
+								type="button"
+								class="button is-small"
+								[class.is-link]="theme.density() === d"
+								(click)="setDensity(d)"
+							>
+								{{ d }}
+							</button>
+						</p>
+					}
+				</div>
+
+				<div class="field has-addons is-flex-wrap-wrap">
+					@for (r of radiuses; track r) {
+						<p class="control">
+							<button
+								type="button"
+								class="button is-small"
+								[class.is-link]="theme.radius() === r"
+								(click)="setRadius(r)"
+							>
+								{{ r }}
+							</button>
+						</p>
+					}
+				</div>
+
+				<a class="button is-link is-light is-small header__cta">Log in</a>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,33 @@
+﻿:host {
+	display: block;
+}
+
+.testi__section {
+	background: var(--c-bg-tertiary);
+	color: var(--c-text-primary);
+	padding: var(--sp-8) 0;
+}
+
+.testi__title {
+	color: var(--c-text-secondary);
+	letter-spacing: var(--letter-spacing);
+}
+
+.testi__muted {
+	color: var(--c-text-muted);
+}
+
+.testi__card {
+	border: 1px solid var(--c-border);
+	border-radius: var(--radius-card);
+	box-shadow: var(--shadow-sm);
+	background: var(--c-bg-secondary);
+}
+
+.testi__body {
+	padding: var(--sp-7);
+}
+
+.testi__quote {
+	color: var(--c-text-primary);
+}

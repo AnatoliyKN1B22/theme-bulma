@@ -1,50 +1,39 @@
-<section class="section has-background-white">
+﻿<section class="section cases__section">
 	<div class="container">
-		<h2 class="title is-3">use cases</h2>
-		<p class="has-text-grey">Swap these with your real customer segments.</p>
+		<h2 class="title is-3 cases__title">use cases</h2>
+		<p class="cases__muted">Swap these with your real customer segments.</p>
 
 		<div class="columns is-multiline is-variable is-4 mt-5">
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="box">
-					<p class="has-text-weight-semibold">startups</p>
-					<p class="has-text-grey mt-2">Launch fast with a clean baseline.</p>
+			@for (
+				c of [
+					['startups', 'Launch fast with a clean baseline.'],
+					[
+						'agencies',
+						'Reuse
+			sections across client projects.',
+					],
+					[
+						'local business',
+						'Present services clearly and
+			simply.',
+					],
+					['communities', 'Explain value and collect signups.'],
+					[
+						'e-commerce',
+						'Show
+			product benefits and trust.',
+					],
+					['education', 'Sell courses with structure and clarity.'],
+				];
+				track c[0]
+			) {
+				<div class="column is-6-tablet is-4-desktop">
+					<div class="box cases__box">
+						<p class="has-text-weight-semibold">{{ c[0] }}</p>
+						<p class="cases__muted mt-2">{{ c[1] }}</p>
+					</div>
 				</div>
-			</div>
-
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="box">
-					<p class="has-text-weight-semibold">agencies</p>
-					<p class="has-text-grey mt-2">Reuse sections across client projects.</p>
-				</div>
-			</div>
-
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="box">
-					<p class="has-text-weight-semibold">local business</p>
-					<p class="has-text-grey mt-2">Present services clearly and simply.</p>
-				</div>
-			</div>
-
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="box">
-					<p class="has-text-weight-semibold">communities</p>
-					<p class="has-text-grey mt-2">Explain value and collect signups.</p>
-				</div>
-			</div>
-
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="box">
-					<p class="has-text-weight-semibold">e-commerce</p>
-					<p class="has-text-grey mt-2">Show product benefits and trust.</p>
-				</div>
-			</div>
-
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="box">
-					<p class="has-text-weight-semibold">education</p>
-					<p class="has-text-grey mt-2">Sell courses with structure and clarity.</p>
-				</div>
-			</div>
+			}
 		</div>
 	</div>
 </section>

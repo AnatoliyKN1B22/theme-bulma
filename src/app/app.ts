@@ -1,14 +1,18 @@
 // src/app/app.component.ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from './layouts/header/header';
+import { ThemeService } from 'wacom';
 
 @Component({
 	selector: 'app-root',
-	imports: [RouterOutlet, Header],
+	imports: [RouterOutlet],
 	templateUrl: './app.html',
 	styleUrl: './app.css',
 })
 export class AppComponent {
-	title = 'theme-bulma';
+	private _themeService = inject(ThemeService);
+
+	constructor() {
+		this._themeService.init();
+	}
 }

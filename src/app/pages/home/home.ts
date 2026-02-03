@@ -10,7 +10,6 @@ import { Showcase } from '../../components/showcase/showcase';
 import { Testimonials } from '../../components/testimonials/testimonials';
 import { TrustBar } from '../../components/trust-bar/trust-bar';
 import { UseCases } from '../../components/use-cases/use-cases';
-import { Footer } from '../../layouts/footer/footer';
 
 @Component({
 	imports: [
@@ -25,7 +24,6 @@ import { Footer } from '../../layouts/footer/footer';
 		Pricing,
 		Faq,
 		FinalCta,
-		Footer,
 	],
 	templateUrl: './home.html',
 	styleUrl: './home.css',

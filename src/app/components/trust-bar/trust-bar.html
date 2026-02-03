@@ -1,37 +1,22 @@
-<section
-	class="section py-5 has-background-white"
-	style="border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb"
->
+﻿<section class="section trust__section">
 	<div class="container">
-		<p class="has-text-centered is-size-7 has-text-grey has-text-weight-semibold is-uppercase">
+		<p class="has-text-centered is-size-7 has-text-weight-semibold is-uppercase trust__muted">
 			trusted by teams who ship
 		</p>
 
 		<div class="columns is-multiline is-variable is-2 mt-4">
-			<div class="column is-6-mobile is-4-tablet is-2-desktop">
-				<div class="box has-text-centered has-text-weight-semibold is-size-7">
-					Northwind
+			@for (
+				b of ['Northwind', 'Acme Co', 'Skyline', 'PixelWorks', 'Orbit', 'BlueRiver'];
+				track b
+			) {
+				<div class="column is-6-mobile is-4-tablet is-2-desktop">
+					<div
+						class="box trust__box has-text-centered has-text-weight-semibold is-size-7"
+					>
+						{{ b }}
+					</div>
 				</div>
-			</div>
-			<div class="column is-6-mobile is-4-tablet is-2-desktop">
-				<div class="box has-text-centered has-text-weight-semibold is-size-7">Acme Co</div>
-			</div>
-			<div class="column is-6-mobile is-4-tablet is-2-desktop">
-				<div class="box has-text-centered has-text-weight-semibold is-size-7">Skyline</div>
-			</div>
-			<div class="column is-6-mobile is-4-tablet is-2-desktop">
-				<div class="box has-text-centered has-text-weight-semibold is-size-7">
-					PixelWorks
-				</div>
-			</div>
-			<div class="column is-6-mobile is-4-tablet is-2-desktop">
-				<div class="box has-text-centered has-text-weight-semibold is-size-7">Orbit</div>
-			</div>
-			<div class="column is-6-mobile is-4-tablet is-2-desktop">
-				<div class="box has-text-centered has-text-weight-semibold is-size-7">
-					BlueRiver
-				</div>
-			</div>
+			}
 		</div>
 	</div>
 </section>

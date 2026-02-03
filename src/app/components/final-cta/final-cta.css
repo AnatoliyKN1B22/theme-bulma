@@ -1,0 +1,45 @@
+﻿:host {
+	display: block;
+}
+
+.finalCta__section {
+	background: var(--c-bg-secondary);
+	color: var(--c-text-primary);
+	padding: var(--sp-8) 0;
+}
+
+.finalCta__box {
+	border: 1px solid var(--c-border);
+	border-radius: var(--radius-card);
+	box-shadow: var(--shadow-md);
+	background: var(--c-bg-tertiary);
+	padding: var(--sp-7);
+}
+
+.finalCta__title {
+	color: var(--c-text-secondary);
+	letter-spacing: var(--letter-spacing);
+}
+
+.finalCta__muted {
+	color: var(--c-text-muted);
+}
+
+.finalCta__btnPrimary {
+	background: var(--c-primary);
+	border-color: var(--c-primary);
+	color: #fff;
+	border-radius: var(--radius-btn);
+}
+
+.finalCta__btnPrimary:hover {
+	background: var(--c-primary-hover);
+	border-color: var(--c-primary-hover);
+}
+
+.finalCta__btnSoft {
+	background: var(--c-bg-secondary);
+	border: 1px solid var(--c-border);
+	color: var(--c-text-secondary);
+	border-radius: var(--radius-btn);
+}

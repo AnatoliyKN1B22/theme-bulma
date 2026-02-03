@@ -1,43 +1,36 @@
-<section class="section has-background-light">
+﻿<section class="section testi__section">
 	<div class="container">
-		<h2 class="title is-3">testimonials</h2>
-		<p class="has-text-grey">Short quotes, clear outcomes, no fluff.</p>
+		<h2 class="title is-3 testi__title">testimonials</h2>
+		<p class="testi__muted">Short quotes, clear outcomes, no fluff.</p>
 
 		<div class="columns is-variable is-4 mt-5">
-			<div class="column is-4-desktop">
-				<div class="card">
-					<div class="card-content">
-						<p class="content">
-							“Perfect starter − we replaced the copy and shipped in a day.”
-						</p>
-						<p class="is-size-7 has-text-grey has-text-weight-semibold mt-4">
-							Alex · product lead
-						</p>
+			@for (
+				t of [
+					[
+						'â€œPerfect starter âˆ’ we replaced the copy and shipped in a day.â€',
+						'Alex Â·
+			product lead',
+					],
+					[
+						'â€œClean sections and spacing âˆ’ no fighting CSS.â€',
+						'Morgan Â· frontend
+			dev',
+					],
+					['â€œGreat baseline for SSR pages and SEO.â€', 'Sam Â· founder'],
+				];
+				track t[1]
+			) {
+				<div class="column is-4-desktop">
+					<div class="card testi__card">
+						<div class="card-content testi__body">
+							<p class="content testi__quote">{{ t[0] }}</p>
+							<p class="is-size-7 has-text-weight-semibold testi__muted mt-4">
+								{{ t[1] }}
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="column is-4-desktop">
-				<div class="card">
-					<div class="card-content">
-						<p class="content">“Clean sections and spacing − no fighting CSS.”</p>
-						<p class="is-size-7 has-text-grey has-text-weight-semibold mt-4">
-							Morgan · frontend dev
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="column is-4-desktop">
-				<div class="card">
-					<div class="card-content">
-						<p class="content">“Great baseline for SSR pages and SEO.”</p>
-						<p class="is-size-7 has-text-grey has-text-weight-semibold mt-4">
-							Sam · founder
-						</p>
-					</div>
-				</div>
-			</div>
+			}
 		</div>
 	</div>
 </section>

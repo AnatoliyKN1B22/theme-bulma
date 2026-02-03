@@ -1,0 +1,26 @@
+﻿:host {
+	display: block;
+}
+
+.faq__section {
+	background: var(--c-bg-tertiary);
+	color: var(--c-text-primary);
+	padding: var(--sp-8) 0;
+}
+
+.faq__title {
+	color: var(--c-text-secondary);
+	letter-spacing: var(--letter-spacing);
+}
+
+.faq__muted {
+	color: var(--c-text-muted);
+}
+
+.faq__box {
+	border: 1px solid var(--c-border);
+	border-radius: var(--radius-card);
+	box-shadow: var(--shadow-sm);
+	background: var(--c-bg-secondary);
+	padding: var(--sp-6);
+}

@@ -1,88 +1,59 @@
-<section class="section has-background-light">
+﻿<section class="section features__section">
 	<div class="container">
 		<div class="level is-align-items-flex-end">
 			<div class="level-left">
 				<div>
-					<h2 class="title is-3">features</h2>
-					<p class="has-text-grey">
+					<h2 class="title is-3 features__title">features</h2>
+					<p class="features__muted">
 						Everything you need for a polished landing baseline.
 					</p>
 				</div>
 			</div>
 
 			<div class="level-right">
-				<a href="#how-it-works" class="button is-white">
+				<a href="#how-it-works" class="button features__btnOutline">
 					<span class="has-text-weight-semibold">see how it works</span>
 				</a>
 			</div>
 		</div>
 
 		<div class="columns is-multiline is-variable is-4 mt-5">
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="card">
-					<div class="card-content">
-						<p class="has-text-weight-semibold">consistent spacing</p>
-						<p class="has-text-grey mt-2">
-							One system for margins, padding, and rhythm across sections.
-						</p>
+			@for (
+				t of [
+					[
+						'consistent spacing',
+						'One system for margins, padding, and rhythm across
+			sections.',
+					],
+					[
+						'responsive by default',
+						'Works from mobile to desktop with sensible
+			breakpoints.',
+					],
+					[
+						'clean typography',
+						'Readable font sizes and line-heights for marketing
+			copy.',
+					],
+					['simple components', 'Cards, lists, badges âˆ’ all built with Bulma.'],
+					['ssr-friendly', 'Layouts that work great with server-side rendering.'],
+					[
+						'easy to
+			theme',
+						'Swap colors/scale with Bulma variables later.',
+					],
+				];
+				track t[0]
+			) {
+				<div class="column is-6-tablet is-4-desktop">
+					<div class="card features__card">
+						<div class="card-content features__cardBody">
+							<p class="has-text-weight-semibold">{{ t[0] }}</p>
+							<p class="features__muted mt-2">{{ t[1] }}</p>
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="card">
-					<div class="card-content">
-						<p class="has-text-weight-semibold">responsive by default</p>
-						<p class="has-text-grey mt-2">
-							Works from mobile to desktop with sensible breakpoints.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="card">
-					<div class="card-content">
-						<p class="has-text-weight-semibold">clean typography</p>
-						<p class="has-text-grey mt-2">
-							Readable font sizes and line-heights for marketing copy.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="card">
-					<div class="card-content">
-						<p class="has-text-weight-semibold">simple components</p>
-						<p class="has-text-grey mt-2">
-							Cards, lists, badges − all built with Bulma.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="card">
-					<div class="card-content">
-						<p class="has-text-weight-semibold">ssr-friendly</p>
-						<p class="has-text-grey mt-2">
-							Layouts that work great with server-side rendering.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="column is-6-tablet is-4-desktop">
-				<div class="card">
-					<div class="card-content">
-						<p class="has-text-weight-semibold">easy to theme</p>
-						<p class="has-text-grey mt-2">
-							Swap colors/scale with Bulma variables later.
-						</p>
-					</div>
-				</div>
-			</div>
+			}
 		</div>
 	</div>
 </section>

@@ -1,0 +1,11 @@
+:host {
+	display: block;
+}
+
+.home__main {
+	background: var(--c-bg-primary);
+	color: var(--c-text-primary);
+	font-family: var(--ff-base);
+	font-size: var(--fs);
+	letter-spacing: var(--letter-spacing);
+}

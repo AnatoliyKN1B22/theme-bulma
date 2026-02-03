@@ -1,0 +1,24 @@
+﻿:host {
+	display: block;
+}
+
+.trust__section {
+	background: var(--c-bg-secondary);
+	color: var(--c-text-primary);
+	padding: var(--sp-7) 0;
+	border-top: 1px solid var(--c-border);
+	border-bottom: 1px solid var(--c-border);
+}
+
+.trust__muted {
+	color: var(--c-text-muted);
+	letter-spacing: var(--letter-spacing);
+}
+
+.trust__box {
+	border: 1px solid var(--c-border);
+	border-radius: var(--radius-card);
+	box-shadow: var(--shadow-sm);
+	background: var(--c-bg-tertiary);
+	padding: var(--sp-4);
+}

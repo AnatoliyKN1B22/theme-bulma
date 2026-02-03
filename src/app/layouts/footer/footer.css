@@ -1,0 +1,120 @@
+:host {
+	display: block;
+}
+
+.footer__root {
+	background: var(--c-bg-secondary);
+	color: var(--c-text-primary);
+	border-top: 1px solid var(--c-border);
+	padding: var(--sp-6) var(--sp-0);
+}
+
+.footer__container {
+	max-width: var(--container);
+	margin: 0 auto;
+	padding: 0 var(--sp-4);
+}
+
+.footer__top {
+	display: flex;
+	gap: var(--sp-5);
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.footer__title {
+	color: var(--c-text-secondary);
+	letter-spacing: var(--letter-spacing);
+}
+
+.footer__muted {
+	color: var(--c-text-muted);
+}
+
+.footer__nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sp-2);
+	justify-content: flex-end;
+}
+
+.footer__link {
+	display: inline-flex;
+	align-items: center;
+	padding: 6px 10px;
+	border-radius: var(--radius-btn);
+	color: var(--c-text-primary);
+	text-decoration: none;
+	border: 1px solid transparent;
+	transition:
+		background var(--motion-fast) var(--easing),
+		border-color var(--motion-fast) var(--easing);
+}
+
+.footer__link:hover {
+	background: var(--c-bg-tertiary);
+	border-color: var(--c-border);
+}
+
+.footer__link.is-active {
+	color: var(--c-text-secondary);
+	border-color: var(--c-border);
+	background: var(--c-bg-tertiary);
+}
+
+.footer__controls {
+	margin-top: var(--sp-5);
+	display: flex;
+	gap: var(--sp-5);
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 1px solid var(--c-border);
+	padding-top: var(--sp-4);
+}
+
+.footer__group {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-3);
+	flex-wrap: wrap;
+}
+
+.footer__label {
+	color: var(--c-text-muted);
+	font-size: 12px;
+	text-transform: lowercase;
+	letter-spacing: var(--letter-spacing);
+}
+
+/* Bulma button theming via tokens */
+.footer__root .button {
+	border-radius: var(--radius-btn);
+	border-color: var(--c-border);
+	background: var(--c-bg-secondary);
+	color: var(--c-text-secondary);
+	box-shadow: var(--shadow-sm);
+	transition:
+		transform var(--motion-fast) var(--easing),
+		background var(--motion-fast) var(--easing);
+}
+
+.footer__root .button:hover {
+	background: var(--c-bg-tertiary);
+}
+
+.footer__root .button.is-link {
+	background: var(--c-primary);
+	border-color: var(--c-primary);
+	color: #fff;
+}
+
+.footer__root .button.is-link:hover {
+	background: var(--c-primary-hover);
+	border-color: var(--c-primary-hover);
+}
+
+.footer__root .buttons.has-addons .button:not(:last-child) {
+	border-right-color: transparent;
+}

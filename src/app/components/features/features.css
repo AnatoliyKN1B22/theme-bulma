@@ -1,0 +1,41 @@
+﻿:host {
+	display: block;
+}
+
+.features__section {
+	background: var(--c-bg-tertiary);
+	color: var(--c-text-primary);
+	padding: var(--sp-8) 0;
+}
+
+.features__title {
+	color: var(--c-text-secondary);
+	letter-spacing: var(--letter-spacing);
+}
+
+.features__muted {
+	color: var(--c-text-muted);
+}
+
+.features__card {
+	border: 1px solid var(--c-border);
+	border-radius: var(--radius-card);
+	box-shadow: var(--shadow-sm);
+	background: var(--c-bg-secondary);
+}
+
+.features__cardBody {
+	padding: var(--sp-6);
+}
+
+.features__btnOutline {
+	background: transparent;
+	border: 1px solid var(--c-border);
+	color: var(--c-text-secondary);
+	border-radius: var(--radius-btn);
+	box-shadow: var(--shadow-sm);
+}
+
+.features__btnOutline:hover {
+	background: var(--c-bg-secondary);
+}
