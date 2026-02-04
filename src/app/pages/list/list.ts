@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { ListItemsComponent } from "./list-item/list-item";
+
 
 @Component({
 	selector: 'app-list',
-	imports: [],
+	standalone: true,
 	templateUrl: './list.html',
 	styleUrl: './list.css',
 })

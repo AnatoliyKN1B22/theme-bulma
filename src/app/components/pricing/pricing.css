@@ -38,21 +38,22 @@
 }
 
 .pricing__card--pro {
-	background: var(--c-text-secondary);
-	border-color: transparent;
-	box-shadow: var(--shadow-md);
+	border: 1px solid var(--c-border);
+	border-radius: var(--radius-card);
+	box-shadow: var(--shadow-sm);
+	background: var(--c-bg-secondary);
 }
 
 .pricing__body--pro {
-	color: #fff;
+	padding: var(--sp-7);
 }
 
 .pricing__price--pro {
-	color: #fff;
+	color: var(--c-text-secondary);
 }
 
 .pricing__muted--pro {
-	color: rgba(255, 255, 255, 0.7);
+	color: var(--c-text-muted);
 }
 
 .pricing__tag {
@@ -63,8 +64,8 @@
 }
 
 .pricing__btnPrimary {
-	background: #fff;
-	border-color: #fff;
+	background: var(--c-bg-secondary);
+	border: 1px solid var(--c-border);
 	color: var(--c-text-secondary);
 	border-radius: var(--radius-btn);
 }

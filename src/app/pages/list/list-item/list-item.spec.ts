@@ -1,20 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+// 👇 Тут була помилка. Тепер імпортуємо правильне ім'я класу
+import { ListItemsComponent } from './list-item'; 
 
-import { ListItem } from './list-item';
-
-describe('ListItem', () => {
-  let component: ListItem;
-  let fixture: ComponentFixture<ListItem>;
+describe('ListItemsComponent', () => {
+  // 👇 Оновлюємо типи змінних
+  let component: ListItemsComponent;
+  let fixture: ComponentFixture<ListItemsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ListItem]
+      // 👇 Додаємо компонент в imports
+      imports: [ListItemsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ListItem);
+    // 👇 Створюємо правильний компонент
+    fixture = TestBed.createComponent(ListItemsComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

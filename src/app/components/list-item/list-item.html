@@ -1,0 +1,31 @@
+<div class="tilt-card h-100"
+     (mousemove)="onMouseMove($event)"
+     (mouseleave)="onMouseLeave()">
+
+  <div class="tilt-content-wrapper card"
+       routerLink="/profile" 
+       [style.transform]="transformStyle"
+       [class]="transitionClass"
+       style="cursor: pointer;"> 
+       
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img [src]="item?.image" alt="Product" style="pointer-events: none; object-fit: cover;">
+      </figure>
+    </div>
+
+    <div class="card-content is-flex is-flex-direction-column" style="height: 100%;">
+      <p class="title is-4">{{ item?.title || 'Назва' }}</p>
+      <p class="subtitle is-6">{{ item?.subtitle || 'Опис' }}</p>
+      
+      <div class="content mt-auto pt-4">
+        <a class="button is-primary is-fullwidth" 
+           routerLink="/profile"
+           (click)="$event.stopPropagation()">
+           Детальніше
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>  

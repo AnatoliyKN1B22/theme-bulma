@@ -1,0 +1,53 @@
+.tilt-card {
+  cursor: pointer;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.tilt-content-wrapper {
+  /* 👇 1. ВИПРАВЛЕННЯ: Використовуємо змінні Bulma для фону */
+  background-color: var(--bulma-card-background-color);
+  color: var(--bulma-card-color);
+  
+  height: 100%;
+  border-radius: var(--bulma-card-radius); /* Радіус теж беремо з теми */
+  
+  /* Тінь тепер використовує змінну для кольору тіні, щоб в темній темі вона не була чорною на чорному */
+  box-shadow: var(--bulma-card-shadow);
+  border: 1px solid var(--bulma-border); /* Додаємо тонкий бордер, який видно в темній темі */
+
+  /* 3D налаштування */
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Плавне повернення */
+.tilt-content-wrapper.is-resetting {
+  transition: transform 0.5s ease-out;
+}
+
+/* Ефект підняття (Hover) */
+.tilt-card:hover .tilt-content-wrapper {
+  /* Робимо тінь трохи глибшою, використовуючи напівпрозорий колір тексту теми */
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.2); 
+  /* АБО, якщо хочеш повну сумісність з Bulma Dark Mode, використовуй це: */
+  /* box-shadow: var(--bulma-box-shadow); */
+}
+
+/* Картинка */
+.card-image img {
+  border-radius: var(--bulma-card-radius) var(--bulma-card-radius) 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* 👇 2. ВИПРАВЛЕННЯ ДЛЯ ТЕКСТУ */
+/* Заголовки і текст будуть брати колір автоматично від батьківського блоку */
+.card-content .title {
+  color: var(--bulma-card-header-color);
+}
+.card-content .subtitle {
+  color: var(--bulma-text);
+}

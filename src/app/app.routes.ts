@@ -4,18 +4,18 @@ import { Content } from './pages/content/content';
 import { Form } from './pages/form/form';
 import { Gallery } from './pages/gallery/gallery';
 import { Home } from './pages/home/home';
-import { List } from './pages/list/list';
-import { Profile } from './pages/profile/profile';
+import { ProfileComponent } from './pages/profile/profile';
 import { Table } from './pages/table/table';
+import { ListItemsComponent } from './pages/list/list-item/list-item';
 
 export const routes: Routes = [
 	{
 		path: '',
 		component: Public,
 		children: [
-			{ path: '', component: Home },
-			{ path: 'list', component: List },
-			{ path: 'profile', component: Profile },
+			{ path: 'home', component: Home },
+			{ path: 'list', component: ListItemsComponent },
+			{ path: 'profile', component: ProfileComponent },
 			{ path: 'form', component: Form },
 			{ path: 'table', component: Table },
 			{ path: 'gallery', component: Gallery },

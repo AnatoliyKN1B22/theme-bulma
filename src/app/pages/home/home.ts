@@ -10,6 +10,8 @@ import { Showcase } from '../../components/showcase/showcase';
 import { Testimonials } from '../../components/testimonials/testimonials';
 import { TrustBar } from '../../components/trust-bar/trust-bar';
 import { UseCases } from '../../components/use-cases/use-cases';
+import { ListItemsComponent} from '../../components/list-items-section/list-items-section';
+
 
 @Component({
 	imports: [
@@ -24,6 +26,7 @@ import { UseCases } from '../../components/use-cases/use-cases';
 		Pricing,
 		Faq,
 		FinalCta,
+		ListItemsComponent,
 	],
 	templateUrl: './home.html',
 	styleUrl: './home.css',
