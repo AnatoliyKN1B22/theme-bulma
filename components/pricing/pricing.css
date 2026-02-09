@@ -1,0 +1,73 @@
+:host {
+	display: block;
+}
+
+.pricing__section {
+	background: var(--c-bg-primary);
+	color: var(--c-text-primary);
+	padding: var(--sp-8) 0;
+}
+
+.pricing__title {
+	color: var(--c-text-secondary);
+	letter-spacing: var(--letter-spacing);
+}
+
+.pricing__muted {
+	color: var(--c-text-muted);
+}
+
+.pricing__card {
+	/* Uses global .card styles from styles.css */
+}
+
+.pricing__body {
+	padding: var(--sp-7);
+}
+
+.pricing__price {
+	color: var(--c-text-secondary);
+}
+
+.pricing__list {
+	list-style: none;
+	margin-left: 0;
+	color: var(--c-text-primary);
+}
+
+.pricing__card--pro {
+	border: 2px solid var(--c-primary);
+	position: relative;
+	transform: scale(1.02);
+	z-index: 1;
+}
+
+.pricing__tag {
+	border-radius: 999px;
+	background: var(--c-primary);
+	color: #ffffff !important;
+	border: none;
+}
+
+.pricing__btnPrimary {
+	background: var(--c-primary);
+	border-color: var(--c-primary);
+	color: #ffffff !important;
+	border-radius: var(--radius-btn);
+}
+
+.pricing__btnPrimary:hover {
+	background: var(--c-primary-hover);
+	border-color: var(--c-primary-hover);
+}
+
+.pricing__btnSoft {
+	background: var(--c-bg-tertiary);
+	border: 1px solid var(--c-border);
+	color: var(--c-text-secondary);
+	border-radius: var(--radius-btn);
+}
+
+.pricing__btnSoft:hover {
+	background: var(--c-bg-secondary);
+}

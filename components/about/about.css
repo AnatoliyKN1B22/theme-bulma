@@ -1,0 +1,58 @@
+﻿:host {
+	display: block;
+}
+
+.about__section {
+	background: var(--c-bg-secondary);
+	color: var(--c-text-primary);
+	padding: var(--sp-8) 0;
+}
+
+.about__title {
+	color: var(--c-text-secondary);
+	letter-spacing: var(--letter-spacing);
+}
+
+.about__text {
+	color: var(--c-text-primary);
+}
+
+.about__muted {
+	color: var(--c-text-muted);
+}
+
+.about__strong {
+	color: var(--c-text-secondary);
+}
+
+.about__card {
+	border: 1px solid var(--c-border);
+	border-radius: var(--radius-card);
+	box-shadow: var(--shadow-sm);
+	background: var(--c-bg-secondary);
+}
+
+.about__cardBody {
+	padding: var(--sp-5);
+}
+
+.about__box {
+	border: 1px solid var(--c-border);
+	border-radius: var(--radius-card);
+	box-shadow: var(--shadow-sm);
+	background: var(--c-bg-secondary);
+	padding: var(--sp-6);
+}
+
+.about__note {
+	border-radius: var(--radius-card);
+	border: 1px solid var(--c-border);
+	background: var(--c-bg-tertiary);
+	color: var(--c-text-primary);
+	padding: var(--sp-4);
+}
+
+.about__noteText {
+	margin: 0;
+	color: var(--c-text-primary);
+}

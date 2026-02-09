@@ -1,0 +1,71 @@
+:host {
+	display: block;
+	margin-bottom: var(--sp-4);
+}
+
+.header__navbar {
+	background: var(--c-bg-secondary);
+	color: var(--c-text-primary);
+	border-bottom: 1px solid var(--c-border);
+	box-shadow: var(--shadow-sm);
+}
+
+.header__brandText {
+	color: var(--c-text-secondary);
+	letter-spacing: var(--letter-spacing);
+}
+
+.navbar-item {
+	color: var(--c-text-primary);
+}
+
+.navbar-item:hover {
+	background: var(--c-bg-tertiary);
+}
+
+.navbar-item.is-active {
+	color: var(--c-primary) !important;
+	font-weight: 700;
+	border-bottom: 2px solid var(--c-primary);
+	background: transparent;
+}
+
+.navbar-burger span {
+	background: var(--c-text-secondary);
+}
+
+.header__controls {
+	display: flex;
+	gap: var(--sp-3);
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+/* tokenized buttons */
+.button {
+	border-radius: var(--radius-btn);
+	border-color: var(--c-border);
+	background: var(--c-bg-secondary);
+	color: var(--c-text-secondary);
+	box-shadow: var(--shadow-sm);
+}
+
+.button:hover {
+	background: var(--c-bg-tertiary);
+}
+
+.button.is-link {
+	background: var(--c-primary);
+	border-color: var(--c-primary);
+	color: #fff;
+}
+
+.button.is-link:hover {
+	background: var(--c-primary-hover);
+	border-color: var(--c-primary-hover);
+}
+
+.header__cta {
+	margin-left: var(--sp-2);
+}

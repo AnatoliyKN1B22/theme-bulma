@@ -1,0 +1,22 @@
+<section class="section">
+  <div class="container">
+    
+    <div class="has-text-centered mb-6">
+      <h2 class="title is-2">Наші продукти</h2>
+      <p class="subtitle is-5">Найкращі пропозиції цього тижня</p>
+    </div>
+
+    <div class="columns is-variable is-4"> <div class="column is-one-third" *ngFor="let product of products">
+        <app-list-item [item]="product"></app-list-item>
+      </div>
+
+    </div>
+
+    <div class="has-text-centered mt-6">
+      <a routerLink="/list" class="button is-primary is-medium is-rounded">
+  Подивитися всі
+</a>
+    </div>
+
+  </div>
+</section>

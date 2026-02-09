@@ -1,0 +1,42 @@
+﻿<section id="how-it-works" class="section how__section">
+	<div class="container">
+		<h2 class="title is-3 how__title">how it works</h2>
+		<p class="how__muted">A simple, practical flow you can adapt to any product.</p>
+
+		<div class="columns is-variable is-4 mt-5">
+			@for (
+				s of [
+					{
+						step: 'step 1',
+						title: 'pick sections',
+						text: 'Keep what you need, delete
+			the rest.',
+					},
+					{
+						step: 'step 2',
+						title: 'replace copy',
+						text: 'Use your product language
+			and real outcomes.',
+					},
+					{
+						step: 'step 3',
+						title: 'ship + iterate',
+						text: 'Measure,
+			refine, and improve conversion.',
+					},
+				];
+				track s.step
+			) {
+				<div class="column is-4-desktop">
+					<div class="box how__box">
+						<p class="is-size-7 has-text-weight-semibold is-uppercase how__muted">
+							{{ s.step }}
+						</p>
+						<p class="has-text-weight-semibold mt-2 how__strong">{{ s.title }}</p>
+						<p class="how__muted mt-2">{{ s.text }}</p>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,22 @@
+﻿<section class="section trust__section">
+	<div class="container">
+		<p class="has-text-centered is-size-7 has-text-weight-semibold is-uppercase trust__muted">
+			trusted by teams who ship
+		</p>
+
+		<div class="columns is-multiline is-variable is-2 mt-4">
+			@for (
+				b of ['Northwind', 'Acme Co', 'Skyline', 'PixelWorks', 'Orbit', 'BlueRiver'];
+				track b
+			) {
+				<div class="column is-6-mobile is-4-tablet is-2-desktop">
+					<div
+						class="box trust__box has-text-centered has-text-weight-semibold is-size-7"
+					>
+						{{ b }}
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</section>

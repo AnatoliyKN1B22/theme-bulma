@@ -1,0 +1,83 @@
+<nav class="navbar header__navbar" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a class="navbar-item header__brand" routerLink="/home">
+			<strong class="header__brandTexT is-2 glass-text main-title-glow">theme-bulma</strong>
+		</a>
+
+		<a
+			role="button"
+			class="navbar-burger"
+			[ngClass]="{ 'is-active': isMenuOpen }"
+			(click)="toggleMenu()"
+			aria-label="menu"
+			aria-expanded="false"
+		>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div>
+
+	<div class="navbar-menu" [ngClass]="{ 'is-active': isMenuOpen }">
+		<div class="navbar-start">
+			<a class="navbar-item" routerLink="/home" routerLinkActive="is-active">Home</a>
+			<a class="navbar-item" routerLink="/list" routerLinkActive="is-active">List</a>
+			<a class="navbar-item" routerLink="/profile" routerLinkActive="is-active">Profile</a>
+			<a class="navbar-item" routerLink="/form" routerLinkActive="is-active">Form</a>
+			<a class="navbar-item" routerLink="/table" routerLinkActive="is-active">Table</a>
+			<a class="navbar-item" routerLink="/gallery" routerLinkActive="is-active">Gallery</a>
+			<a class="navbar-item" routerLink="/content" routerLinkActive="is-active">Content</a>
+		</div>
+
+		<div class="navbar-end">
+			<div class="navbar-item header__controls">
+				<div class="field has-addons is-flex-wrap-wrap">
+					@for (m of modes; track m) {
+						<p class="control">
+							<button
+								type="button"
+								class="button is-small"
+								[class.is-link]="theme.mode() === m"
+								(click)="setMode(m)"
+							>
+								{{ m }}
+							</button>
+						</p>
+					}
+				</div>
+
+				<div class="field has-addons is-flex-wrap-wrap">
+					@for (d of densities; track d) {
+						<p class="control">
+							<button
+								type="button"
+								class="button is-small"
+								[class.is-link]="theme.density() === d"
+								(click)="setDensity(d)"
+							>
+								{{ d }}
+							</button>
+						</p>
+					}
+				</div>
+
+				<div class="field has-addons is-flex-wrap-wrap">
+					@for (r of radiuses; track r) {
+						<p class="control">
+							<button
+								type="button"
+								class="button is-small"
+								[class.is-link]="theme.radius() === r"
+								(click)="setRadius(r)"
+							>
+								{{ r }}
+							</button>
+						</p>
+					}
+				</div>
+
+				<a class="button is-link is-small header__cta">Log in</a>
+			</div>
+		</div>
+	</div>
+</nav>

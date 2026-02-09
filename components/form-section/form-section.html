@@ -1,0 +1,39 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="box">
+	<div class="columns is-multiline">
+		<div class="column is-half" *ngFor="let f of formConfig">
+			<div class="field">
+				<label class="label">{{ f.label }}</label>
+				<div class="control" *ngIf="f.type !== 'textarea'">
+					<input
+						class="input"
+						[type]="f.type"
+						[formControlName]="f.key"
+						[attr.placeholder]="f.label"
+					/>
+				</div>
+				<div class="control" *ngIf="f.type === 'textarea'">
+					<textarea class="textarea" [formControlName]="f.key" [attr.placeholder]="f.label"></textarea>
+				</div>
+				<p class="help is-danger" *ngIf="control(f.key)?.invalid && (control(f.key)?.touched || submitted)">
+					<span *ngIf="control(f.key)?.errors?.['required']">{{ f.label }} is required.</span>
+					<span *ngIf="control(f.key)?.errors?.['email']">Invalid email format.</span>
+					<span *ngIf="control(f.key)?.errors?.['min']">Value is too small.</span>
+					<span *ngIf="control(f.key)?.errors?.['pattern']">Invalid format.</span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="field is-grouped">
+		<div class="control">
+			<button class="button is-primary" type="submit">Submit Order</button>
+		</div>
+		<div class="control">
+			<button type="button" class="button" (click)="form.reset()">Reset</button>
+		</div>
+	</div>
+
+	<div *ngIf="successMessage" class="notification is-success mt-4">
+		{{ successMessage }}
+	</div>
+</form>

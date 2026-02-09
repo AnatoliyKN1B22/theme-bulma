@@ -1,0 +1,88 @@
+<section class="section">
+	<div class="container has-text-centered">
+		<h1 class="title is-2 main-title-glow mb-6">Our Blog & Content</h1>
+
+		<!-- Filters & Search -->
+		<div class="level mb-6">
+			<div class="level-left">
+				<div class="level-item">
+					<div class="field has-addons">
+						<p class="control">
+							<span class="button is-static">
+								<i class="fas fa-search"></i>
+							</span>
+						</p>
+						<p class="control">
+							<input
+								class="input"
+								type="text"
+								placeholder="Search posts..."
+								[value]="searchQuery()"
+								(input)="updateSearch($event)"
+							/>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="level-right">
+				<div class="level-item">
+					<div class="buttons">
+						@for (cat of categories; track cat) {
+						<button
+							class="button"
+							[class.is-link]="selectedCategory() === cat"
+							(click)="setCategory(cat)"
+						>
+							{{ cat }}
+						</button>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Blog Grid -->
+		<div class="columns is-multiline">
+			@for (post of filteredPosts(); track post.id) {
+			<div class="column is-4-desktop is-6-tablet">
+				<div
+					class="tilt-card h-100"
+					(mousemove)="onMouseMove($event, post.id)"
+					(mouseleave)="onMouseLeave(post.id)"
+				>
+					<div
+						class="card blog-card tilt-content-wrapper h-100"
+						[style.transform]="post.transform"
+						[class]="post.transitionClass"
+					>
+						<div class="card-image">
+							<figure class="image is-16by9">
+								<img [src]="post.image" [alt]="post.title" style="pointer-events: none;" />
+							</figure>
+						</div>
+						<div class="card-content">
+							<div class="media mb-2">
+								<div class="media-content">
+									<span class="tag is-link is-light">{{ post.category }}</span>
+									<span class="is-size-7 has-text-grey ml-3">{{ post.date }}</span>
+								</div>
+							</div>
+							<h3 class="title is-4 mb-3">{{ post.title }}</h3>
+							<p class="subtitle is-6">{{ post.excerpt }}</p>
+							<a class="button is-link is-text pl-0">Read more →</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			} @empty {
+			<div class="column is-12 has-text-centered py-6">
+				<p class="is-size-4 has-text-grey">No posts found matching your criteria.</p>
+				<button class="button is-link is-light mt-4" (click)="setCategory('All'); searchQuery.set('')">
+					Clear all filters
+				</button>
+			</div>
+			}
+		</div>
+	</div>
+</section>

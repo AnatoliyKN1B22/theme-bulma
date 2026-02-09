@@ -1,0 +1,68 @@
+<footer class="footer footer__root">
+	<div class="content footer__container">
+		<div class="footer__top">
+			<div>
+				<p class="has-text-weight-semibold footer__title">theme-bulma</p>
+				<p class="is-size-7 footer__muted">© {{ year }} · All rights reserved.</p>
+			</div>
+
+			<nav class="footer__nav">
+				@for (p of pages; track p.link) {
+					<a class="footer__link" [routerLink]="p.link" routerLinkActive="is-active">
+						{{ p.label }}
+					</a>
+				}
+			</nav>
+		</div>
+
+		<div class="footer__controls">
+			<div class="footer__group">
+				<span class="footer__label">mode</span>
+				<div class="buttons are-small has-addons">
+					@for (m of modes; track m) {
+						<button
+							type="button"
+							class="button"
+							[class.is-link]="theme.mode() === m"
+							(click)="setMode(m)"
+						>
+							{{ m }}
+						</button>
+					}
+				</div>
+			</div>
+
+			<div class="footer__group">
+				<span class="footer__label">density</span>
+				<div class="buttons are-small has-addons">
+					@for (d of densities; track d) {
+						<button
+							type="button"
+							class="button"
+							[class.is-link]="theme.density() === d"
+							(click)="setDensity(d)"
+						>
+							{{ d }}
+						</button>
+					}
+				</div>
+			</div>
+
+			<div class="footer__group">
+				<span class="footer__label">radius</span>
+				<div class="buttons are-small has-addons">
+					@for (r of radiuses; track r) {
+						<button
+							type="button"
+							class="button"
+							[class.is-link]="theme.radius() === r"
+							(click)="setRadius(r)"
+						>
+							{{ r }}
+						</button>
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,44 @@
+<section class="section gallery-glass-section">
+	<div class="container has-text-centered">
+		<h1 class="title is-2 glass-text main-title-glow mb-6">Gallery</h1>
+		<div class="columns is-multiline">
+			@for (image of images; track image.url; let i = $index) {
+			<div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+				<div class="glass-card" (click)="openImage(i)">
+					<div class="glass-card-image">
+						<figure class="image is-4by3">
+							<img [src]="image.thumb" alt="Gallery image" />
+						</figure>
+					</div>
+					<div class="glass-reflection"></div>
+				</div>
+			</div>
+			}
+		</div>
+	</div>
+</section>
+
+@if (selectedImageIndex !== null) {
+<div class="modal is-active glass-modal">
+	<div class="modal-background glass-overlay" (click)="closeImage()"></div>
+	<div class="modal-content glass-viewer is-relative">
+		<p class="image">
+			<img [src]="selectedImage" alt="Fullscreen image" class="glass-img" />
+		</p>
+		<!-- Navigation Arrows -->
+		<button
+			class="button glass-nav glass-nav--prev"
+			(click)="prevImage($event)"
+		>
+			<span class="icon"><i class="fas fa-chevron-left"></i></span>
+		</button>
+		<button
+			class="button glass-nav glass-nav--next"
+			(click)="nextImage($event)"
+		>
+			<span class="icon"><i class="fas fa-chevron-right"></i></span>
+		</button>
+	</div>
+	<button class="modal-close is-large glass-close" aria-label="close" (click)="closeImage()"></button>
+</div>
+}

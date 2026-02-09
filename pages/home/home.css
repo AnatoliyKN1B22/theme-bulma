@@ -1,0 +1,7 @@
+:host {
+	display: block;
+}
+
+.home__main {
+	/* background and color are now inherited from app.component */
+}

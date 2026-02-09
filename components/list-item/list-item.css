@@ -1,0 +1,33 @@
+.tilt-card {
+  cursor: pointer;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.tilt-content-wrapper {
+  height: 100%;
+  border-radius: var(--radius-card);
+  
+  /* 3D налаштування */
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Плавне повернення */
+.tilt-content-wrapper.is-resetting {
+  transition: transform 0.5s ease-out;
+}
+
+/* Ефект підняття (Hover) */
+.tilt-card:hover .tilt-content-wrapper {
+  box-shadow: var(--shadow-md);
+}
+
+/* Картинка */
+.card-image img {
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

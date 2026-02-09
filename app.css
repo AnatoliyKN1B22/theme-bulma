@@ -1,0 +1,19 @@
+:host {
+	display: block;
+	min-height: 100vh;
+	background: var(--c-bg-primary);
+	color: var(--c-text-primary);
+	font-family: var(--ff-base);
+	font-size: var(--fs);
+	letter-spacing: var(--letter-spacing);
+}
+
+.section {
+	padding-top: 5rem;
+}
+
+/* Активний пункт меню */
+.navbar-item.is-active {
+	font-weight: 600;
+	background-color: transparent;
+}

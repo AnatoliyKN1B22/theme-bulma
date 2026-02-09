@@ -1,0 +1,32 @@
+<div class="box">
+	<div class="field">
+		<div class="control has-icons-left">
+			<input class="input" placeholder="Search orders..." [(ngModel)]="filter" />
+			<span class="icon is-left"><i class="fas fa-search"></i></span>
+		</div>
+	</div>
+
+	<table class="table is-fullwidth is-striped">
+		<thead>
+			<tr>
+				<th *ngFor="let c of columns" (click)="sortBy(c.key)" style="cursor:pointer">
+					{{ c.label }}
+					<span *ngIf="sortKey === c.key">{{ sortDir === 1 ? '▲' : '▼' }}</span>
+				</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let row of filtered">
+				<td *ngFor="let c of columns">{{ row[c.key] }}</td>
+				<td>
+					<button class="button is-small is-info">View</button>
+					<button class="button is-small is-danger">Cancel</button>
+				</td>
+			</tr>
+			<tr *ngIf="filtered.length === 0">
+				<td [attr.colspan]="columns.length + 1">No orders found.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

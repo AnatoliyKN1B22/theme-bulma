@@ -1,0 +1,6 @@
+.box {
+	padding: 1rem;
+}
+.table thead th {
+	user-select: none;
+}

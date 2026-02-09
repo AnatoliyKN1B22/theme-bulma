@@ -1,0 +1,67 @@
+:host {
+	display: block;
+}
+
+.gallery-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1; /* Залишаємо за контентом */
+	background: var(--c-bg-primary);
+	overflow: hidden;
+	pointer-events: none;
+}
+
+/* Створюємо ефект сітчастого градієнта на весь екран */
+.gallery-background::before,
+.gallery-background::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.gallery-background::before {
+	background: 
+		radial-gradient(circle at 10% 10%, var(--c-primary) 0%, transparent 50%),
+		radial-gradient(circle at 90% 90%, #8c67ef 0%, transparent 50%);
+	opacity: 0.4;
+}
+
+.gallery-background::after {
+	background: 
+		radial-gradient(circle at 90% 10%, var(--c-secondary) 0%, transparent 50%),
+		radial-gradient(circle at 10% 90%, var(--c-primary) 0%, transparent 50%);
+	opacity: 0.3;
+}
+
+/* Додаткові м'які плями для глибини */
+.corner-glow {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	filter: blur(150px);
+	opacity: 0.2;
+}
+
+.glow-tl {
+	top: -20%;
+	left: -20%;
+	background: radial-gradient(circle, var(--c-primary) 0%, transparent 70%);
+}
+
+.glow-tr {
+	top: -20%;
+	right: -20%;
+	background: radial-gradient(circle, var(--c-secondary) 0%, transparent 70%);
+}
+
+app-gallery-section {
+	display: block;
+	position: relative;
+	z-index: 1;
+}
